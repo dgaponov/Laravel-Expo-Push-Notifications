@@ -6,6 +6,7 @@ class ExpoPushNotificationMessage
 {
     public $title;
     public $body;
+    public $data = [];
     public $subtitle = '';
     public $priority = 'default';
     public $sound = 'default';
@@ -20,6 +21,12 @@ class ExpoPushNotificationMessage
     public function body($body)
     {
         $this->body = $body;
+        return $this;
+    }
+
+    public function data(array $data)
+    {
+        $this->data = $data;
         return $this;
     }
 

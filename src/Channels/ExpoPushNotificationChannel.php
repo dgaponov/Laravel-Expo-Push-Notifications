@@ -47,6 +47,7 @@ class ExpoPushNotificationChannel
             'priority' => $data->priority,
             'sound' => $data->sound,
             'badge' => $data->badgeCount,
+            'data' => $data->data,
         ];
         return $result;
     }
