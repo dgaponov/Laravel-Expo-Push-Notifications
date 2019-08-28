@@ -4,5 +4,5 @@ namespace VientoDigital\LaravelExpoPushNotifications;
 
 interface ExpoPushNotifiable
 {
-    public function tokens():array;
+    public function tokensForExpo(): array;
 }

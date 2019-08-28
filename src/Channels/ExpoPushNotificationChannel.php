@@ -29,7 +29,7 @@ class ExpoPushNotificationChannel
 
     private function sendTokens(ExpoPushNotifiable $notifiable, Notification $notification, $data)
     {
-        $tokens = collect($notifiable->tokens());
+        $tokens = collect($notifiable->tokensForExpo());
         $tokens->each(function ($to, $key) use ($notifiable, $notification,$data) {
             $data = $this->buildMessage($notification->toExpo($notifiable));
             $data['to'] = $to;
